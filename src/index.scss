@@ -1,0 +1,57 @@
+* {
+  font-family: "SB Sans Display", Arial, Helvetica, sans-serif;
+  font-feature-settings: 'tnum'on, 'lnum'on;
+}
+
+.main-padding-horizontal {
+  padding-left: calc(50vw - 720px);
+  padding-right: calc(50vw - 720px);
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 1680px) {
+  .main-padding-horizontal {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .main-padding-horizontal {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-padding-horizontal {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-padding-horizontal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

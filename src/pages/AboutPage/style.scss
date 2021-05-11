@@ -1,0 +1,66 @@
+.about-page {
+  &__bread-crumbs-wrapper {
+    margin: 24px 0;
+  }
+
+  &__date-location-wrapper {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 24px;
+  }
+
+  &__location-text {
+    width: 100%;
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3A424A;
+
+  }
+
+  &__section {
+    margin-top: 64px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    max-width: 1000px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__date-wrapper {
+    margin-bottom: 24px;
+  }
+
+  &__desc {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .about-page {
+
+    &__section {
+      margin-top: 32px;
+    }
+
+    &__desc {
+      margin-top: 0px;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+    }
+
+  }
+}

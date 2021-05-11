@@ -1,0 +1,141 @@
+.top {
+  margin-top: 100px;
+  position: relative;
+
+  &__items-wrapper {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  &__item {
+    margin-bottom: 24px;
+    width: 33%;
+  }
+
+  &__circle-wrapper {
+    pointer-events: none;
+    height: 200%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  &__circle {
+    position: absolute;
+    width: 820px;
+    height: 820px;
+    z-index: -1;
+    top: 0;
+
+    &_1 {
+      left: -365px;
+      background: radial-gradient(54.18% 50.09% at 49.91% 49.91%, #6ACFF5 0%, #AFF699 50.39%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.4;
+    }
+
+    &_2 {
+      right: -352px;
+      background: radial-gradient(54.18% 50.09% at 49.91% 49.91%, #6ACFF5 0%, #E6FDD4 50.39%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.4;
+    }
+  }
+
+  &__tabs {
+    width: 238px;
+    height: 44px;
+    border: 2px solid #99CC33;
+    border-radius: 22px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__tab {
+    cursor: pointer;
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+
+    color: #99CC33;
+
+    &_active {
+      background-color: #99CC33;
+      color: #fff;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1270px) {
+  .top {
+    margin-top: 60px;
+
+    &__items-wrapper {
+      margin-top: 16px;
+    }
+
+    &__item {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .top {
+    &__item {
+      margin-bottom: 24px;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .top {
+    &__item {
+      width: 100%;
+    }
+
+    &__circle {
+      &-wrapper {
+        height: 100%;
+      }
+
+      &_2 {
+        top: 700px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .top {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .top {
+    &__circle {
+      width: 500px;
+
+      &_1 {
+        left: -250px;
+      }
+
+      &_2 {
+        right: -250px;
+        top: 450px;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.personal-area-main {
+  &__input {
+    width: 384px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 32px;
+    margin-top: 24px;
+  }
+
+  &__form {
+    margin-top: 32px;
+  }
+
+  &__bread-crumbs {
+    margin: 24px 0;
+  }
+
+  &__img-wrapper {
+    width: 120px;
+    height: 120px;
+    background: #99CC33;
+    border-radius: 50%;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img-none {
+    font-size: 46px;
+    line-height: 42px;
+    color: #fff;
+    font-weight: 600;
+  }
+}

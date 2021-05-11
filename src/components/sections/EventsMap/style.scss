@@ -1,0 +1,21 @@
+.events-map {
+  &__bread-crumbs {
+    margin: 24px 0;
+  }
+
+  &__main {
+    height: 600px;
+    max-height: 70vh;
+    background-color: rgb(189, 255, 189);
+    margin-top: 32px;
+  }
+
+  &__info {
+    margin-top: 32px;
+    display: flex;
+  }
+
+  &__info-item {
+    margin-right: 32px;
+  }
+}

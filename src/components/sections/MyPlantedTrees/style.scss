@@ -1,0 +1,15 @@
+.my-planted-trees {
+  &__map {
+    width: 100%;
+    height: 449px;
+
+  }
+
+  &__map-wrapper {}
+
+  &__map-inner {
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+  }
+}

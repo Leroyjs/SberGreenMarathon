@@ -1,0 +1,36 @@
+.regictration-main {
+  &__bread-crumbs {
+    margin: 24px 0;
+  }
+
+  &__input-item {
+    width: 384px;
+    margin-right: 24px;
+    margin-top: 32px;
+  }
+
+  &__inputs {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__agreements {
+    font-size: 10px;
+    line-height: 12px;
+    color: #3A424A;
+  }
+
+  &__agreements-link {
+    color: #99CC33;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__checkbox {
+    margin: 32px 0;
+  }
+}

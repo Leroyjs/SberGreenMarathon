@@ -1,0 +1,29 @@
+.reset-password {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &__inner {
+    max-width: 330px;
+    width: 100%;
+    padding: 12px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    margin-top: 64px;
+  }
+
+  &__input-item {
+    margin-bottom: 16px;
+  }
+
+  &__wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

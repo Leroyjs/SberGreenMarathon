@@ -1,0 +1,42 @@
+.checkbox {
+  margin-right: 10px;
+  min-width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  border: 1px solid #BFC5CA;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border: 1px solid #99CC33;
+    filter: drop-shadow(0px 0px 24px rgba(163, 205, 57, 0.7));
+  }
+
+  // &_focus {
+  //   border: 1px solid #99CC33;
+  // }
+
+  &__wrapper {
+    display: flex;
+    cursor: pointer;
+
+    &_error {
+      .checkbox {
+        border: 1px solid #E06666;
+
+        &__text {
+          p {
+            color: #E06666;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__invisible {
+    display: none;
+  }
+}

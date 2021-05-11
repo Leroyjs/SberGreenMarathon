@@ -1,0 +1,50 @@
+.calendar {
+  margin: 0 auto;
+  margin-top: 100px;
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__arrows {
+    margin-left: 27px;
+  }
+
+  &__arrow {
+    cursor: pointer;
+    margin-right: 18px;
+  }
+
+  &__slider {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .calendar {
+    margin-top: 60px;
+
+    &__slider {
+      margin-top: 16px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .calendar {
+    margin-top: 40px;
+
+    &__title-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__arrows {
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 18px;
+    }
+  }
+}

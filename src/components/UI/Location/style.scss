@@ -1,0 +1,7 @@
+.location {
+  &:hover {
+    .location__text {
+      text-decoration-line: underline;
+    }
+  }
+}

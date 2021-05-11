@@ -1,0 +1,24 @@
+.h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #3A424A;
+
+  &_pop-up {
+    font-size: 28px;
+    line-height: 33px;
+    color: #3A424A;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1170px) {
+  .h3 {
+    font-size: 18px;
+
+    &_pop-up {
+      font-size: 22px;
+    }
+  }
+
+}

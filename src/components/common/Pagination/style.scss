@@ -1,0 +1,41 @@
+.pagination {
+  display: flex;
+  align-items: center;
+
+  &__li {
+    margin-right: 4px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    color: #7AA328;
+
+    &_active {
+      background: #99CC33;
+      border-radius: 4px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__next {
+    font-size: 14px;
+    line-height: 20px;
+    color: #7AA328;
+
+    margin-left: 10px;
+  }
+
+  &__arrow {
+    margin-left: 8px;
+  }
+}

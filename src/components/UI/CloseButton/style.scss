@@ -1,0 +1,24 @@
+.close-button {
+  position: absolute;
+  top: 35px;
+  right: 29px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+
+  path {
+    transition: stroke .2s;
+  }
+
+  &:hover {
+    path {
+      stroke: #99CC33;
+    }
+  }
+
+  &:active {
+    path {
+      stroke: #99CC33;
+    }
+  }
+}

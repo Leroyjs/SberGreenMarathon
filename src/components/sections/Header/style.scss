@@ -1,0 +1,261 @@
+.number-of-trees {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4D5862;
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__bold {
+    font-weight: 600;
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 14px;
+
+    /* Cool Gray / Cool Gray 3 */
+
+    color: #A0A8B0;
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 42px;
+  height: 32px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__row {
+    z-index: 100;
+    display: flex;
+    align-items: center;
+  }
+
+  &__main-logo {
+    margin-right: 16px;
+  }
+
+  &__green-marathon {
+    margin-right: 16px;
+    margin-left: 16px;
+    align-self: flex-end;
+  }
+
+  &__info {
+    margin-left: 16px;
+
+    line-height: 14px;
+    font-size: 12px;
+    color: #4D5862;
+  }
+
+  &__number-of-trees {
+    margin-left: 16px;
+
+    &_mobile {
+      display: none;
+    }
+
+    &_tablet {
+      display: none;
+    }
+  }
+
+  &__burger-wrapper {
+    display: none;
+  }
+
+  &__nav {
+    margin-top: 22px;
+    border-bottom: 2px solid #DFE2E4;
+    padding-bottom: 24px;
+  }
+
+  &__log-in {
+    padding-left: 20px;
+  }
+}
+
+.vertical-line {
+  height: 100%;
+  width: 1px;
+  background-color: #DFE2E4;
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &:hover {
+    .nav__line {
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    margin-right: 32px;
+  }
+
+  &__link {
+    color: #3A424A;
+    font-size: 16px;
+    line-height: 19px;
+    transition: color .3s;
+
+    &:hover {
+      color: #99CC33;
+    }
+  }
+
+  &__ul {
+    align-items: center;
+    display: flex;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    opacity: 0;
+    background-color: #99CC33;
+    transition: .3s;
+  }
+}
+
+
+
+.location {
+  cursor: pointer;
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #7AA328;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .nav {
+    &__link {
+      font-size: 14px;
+    }
+
+    &__item {
+      margin-right: 26px;
+    }
+  }
+
+  .location {
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  .number-of-trees {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .main-header {
+    margin-top: 30px;
+
+    &__mobile-plug {
+      height: 121px;
+    }
+
+    &__wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: #fff;
+      padding-bottom: 25px;
+    }
+
+    &__burger {
+      margin-top: -8px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__location {
+      display: none;
+    }
+
+    &__burger-wrapper {
+      display: flex;
+    }
+
+    &__number-of-trees {
+      &_desktop {
+        display: none;
+      }
+
+      &_tablet {
+        display: flex;
+      }
+    }
+
+    .vertical-line:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  .main-header {
+    &__number-of-trees {
+      &_tablet {
+        display: none;
+      }
+
+      &_mobile {
+        display: flex;
+        margin-left: 16px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-header {
+    height: 22px;
+
+    &__main-logo {
+      width: 80px;
+      margin-right: 11px;
+    }
+
+    &__green-marathon {
+      width: 84px;
+      margin-left: 11px;
+      margin-right: 0;
+    }
+
+    &__burger {
+      margin-top: -14px;
+    }
+  }
+}

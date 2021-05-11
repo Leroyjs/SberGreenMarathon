@@ -1,0 +1,164 @@
+.offer-slider {
+  width: 100%;
+
+  &__item-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .column {
+    z-index: 1;
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    padding: 90px 70px;
+    margin: 40px calc(50vw - 720px);
+    display: flex;
+    width: 1440px;
+    height: 400px;
+
+    background: #FFFFFF;
+    /* 1 */
+
+    box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+  }
+
+  &__title {
+    z-index: 1;
+    width: 500px;
+  }
+}
+
+@media (max-width: 1680px) {
+  .offer-slider {
+    &__item {
+      margin: 40px 120px;
+      width: calc(100% - 240px);
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 1350px) {
+  .offer-slider {
+    &__item {
+      height: 360px;
+    }
+
+    &__item-bg {
+      width: 600px;
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .offer-slider {
+    &__item {
+      width: calc(100% - 120px);
+      margin: 40px 60px;
+      padding: 70px 70px;
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .offer-slider {
+    &__item-bg {
+      width: 450px;
+    }
+
+    &__item {
+      height: 300px;
+      width: calc(100% - 120px);
+      padding: 60px 40px;
+      padding-top: 40px;
+    }
+
+    &__title {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .offer-slider {
+    &__item-bg {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .offer-slider {
+    &__item {
+      height: 500px;
+      width: calc(100% - 40px);
+    }
+
+    .column {
+      height: 200px;
+    }
+
+    &__item-bg {
+      width: 550px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .offer-slider {
+    &__title {
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .column {
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .offer-slider {
+    &__item-bg {
+      width: 100%;
+    }
+
+    &__item {
+      margin-top: 12px;
+      padding: 24px 16px;
+      height: 460px;
+      width: calc(100% - 24px);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .offer-slider {
+    &__item {
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .offer-slider {
+    &__item {
+      height: 380px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .offer-slider {
+    &__item {
+
+      height: 350px;
+    }
+  }
+}

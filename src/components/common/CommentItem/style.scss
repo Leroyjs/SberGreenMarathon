@@ -1,0 +1,29 @@
+.comment-item {
+  background: #EFF0F1;
+  border-radius: 8px;
+  width: 996px;
+  padding: 24px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__body {
+    margin-top: 16px;
+  }
+
+  &__img-list {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+}

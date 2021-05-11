@@ -1,0 +1,47 @@
+.minor-button {
+  padding-top: 11px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 36px;
+  background-color: rgba(0, 0, 0, 0);
+
+  font-size: 16px;
+  line-height: 100%;
+  /* White / White */
+
+  color: #99CC33;
+  border: 2px solid #99CC33;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &__img {
+    margin-right: 12px;
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 24px rgba(163, 205, 57, 0.7);
+  }
+
+  &:active {
+    background: #ADD65B;
+  }
+}
+
+@media (max-width: 1350px) {
+  .button {
+    font-size: 14px;
+
+    &__img {
+      margin-right: 10px;
+      max-width: 20px;
+      max-height: 20px;
+    }
+  }
+}

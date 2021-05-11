@@ -1,0 +1,31 @@
+.photo-gallery-slider {
+  height: 180px;
+
+  &__item {
+    height: 180px;
+    width: 180px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1170px) {
+  .photo-gallery-slider {
+    height: 120px;
+
+    &__item {
+      margin-right: 16px;
+      margin-bottom: 16px;
+      height: 120px;
+      width: 120px;
+    }
+  }
+}
