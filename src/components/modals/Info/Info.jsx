@@ -17,6 +17,7 @@ export const Info = ({ title, buttonText, setStateOfPopUps }) => {
             logIn: false,
             info: false,
             forgotPassword: false,
+            resetPassword: false,
         });
     };
     const handleClose = () => {
@@ -25,6 +26,7 @@ export const Info = ({ title, buttonText, setStateOfPopUps }) => {
             logIn: false,
             info: false,
             forgotPassword: false,
+            resetPassword: false,
         });
     };
     return (

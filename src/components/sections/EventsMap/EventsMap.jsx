@@ -46,7 +46,7 @@ let EventsMap = ({ cityAccount }) => {
                     <div className="events-map__info-item">
                         <LegendItem
                             img={greenSignImg}
-                            text="Посаженое дерево"
+                            text="Посаженное дерево"
                         />
                     </div>
                     {/* <div className="events-map__info-item">

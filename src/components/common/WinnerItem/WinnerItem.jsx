@@ -27,7 +27,7 @@ export const WinnerItem = ({ img, place, name, score, surname }) => {
             <div className="winner__info">
                 <div className="winner__place">{place} место</div>
                 <div className="winner__name">{name + ' ' + surname}</div>
-                <div className="winner__score">{score} посаженых дереьвев</div>
+                <div className="winner__score">Деревьев посажено - {score}</div>
             </div>
         </div>
     );

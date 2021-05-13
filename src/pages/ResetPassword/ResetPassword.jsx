@@ -9,10 +9,12 @@ import { Button } from '../../components/UI/Button/Button';
 import { TitleH1 } from '../../components/UI/TitleH1/TitleH1';
 
 import { config } from '../../config';
+import { connect } from 'react-redux';
+import { setStateOfPopUps } from '../../redux/actions';
 
 const axios = require('axios');
 
-export const ResetPassword = ({ location }) => {
+let ResetPassword = ({ setStateOfPopUps }) => {
     const [passwordError, setPasswordError] = useState(false);
     const [passwordSecondError, setPasswordSecondError] = useState(false);
     const [password, setPassword] = useState(false);
@@ -38,7 +40,9 @@ export const ResetPassword = ({ location }) => {
                 .then(
                     (response) => {
                         console.log(response);
-                        history.push('/');
+                        setStateOfPopUps({
+                            resetPassword: true,
+                        });
                     },
                     (error) => {
                         setPassword('');
@@ -123,3 +127,9 @@ export const ResetPassword = ({ location }) => {
         return errors;
     }
 };
+
+ResetPassword = connect(null, {
+    setStateOfPopUps,
+})(ResetPassword);
+
+export { ResetPassword };

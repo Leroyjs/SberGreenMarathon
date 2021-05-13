@@ -11,6 +11,7 @@ let RootPopUp = ({
     info,
     city,
     forgotPassword,
+    resetPassword,
     setStateOfPopUps,
     setStateOfAccount,
 }) => {
@@ -42,6 +43,15 @@ let RootPopUp = ({
                     />
                 </Modal>
             )}
+            {resetPassword && (
+                <Modal>
+                    <Info
+                        title="Вы сменили пароль"
+                        buttonText="Войти"
+                        setStateOfPopUps={setStateOfPopUps}
+                    />
+                </Modal>
+            )}
             {city && (
                 <Modal>
                     <Cities setStateOfPopUps={setStateOfPopUps} />
@@ -56,6 +66,7 @@ const mapStateToProps = (state) => {
         logIn: state.popUps.logIn,
         info: state.popUps.info,
         city: state.popUps.city,
+        resetPassword: state.popUps.resetPassword,
         forgotPassword: state.popUps.forgotPassword,
     };
 };

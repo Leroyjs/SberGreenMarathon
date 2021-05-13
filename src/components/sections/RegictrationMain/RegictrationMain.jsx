@@ -24,6 +24,8 @@ let RegictrationMain = ({ regNewAccount }) => {
     const [city, setCity] = useState(false);
     const [password, setPassword] = useState(false);
     const [passwordSecond, setPasswordSecond] = useState(false);
+    const [team, setTeam] = useState(false);
+    const [teamActive, setTeamActive] = useState(false);
     const [agreement, setAgreement] = useState(false);
     const [nameError, setNameError] = useState(false);
     const [surnameError, setSurnameError] = useState(false);
@@ -137,6 +139,31 @@ let RegictrationMain = ({ regNewAccount }) => {
                             placeholder="Повторите пароль"
                         />
                     </div>
+                    <div className="regictration-main__team">
+                        <div className="regictration-main__input-item">
+                            <Input
+                                externalValue={!teamActive ? teamActive : team}
+                                handler={(value) => {
+                                    setTeam(value);
+                                }}
+                                isDisabled={!teamActive}
+                                title="Команда (если есть)"
+                                placeholder="Введите название команды"
+                            />
+                        </div>
+                        <div className="regictration-main__checkbox regictration-main__checkbox_team">
+                            <Checkbox
+                                handler={(value) => {
+                                    setTeamActive(value);
+                                }}
+                                error={agreementError}
+                            >
+                                <p className="regictration-main__agreements">
+                                    У меня есть команда
+                                </p>
+                            </Checkbox>
+                        </div>
+                    </div>
                 </div>
                 <div className="regictration-main__checkbox">
                     <Checkbox
@@ -243,12 +270,15 @@ let RegictrationMain = ({ regNewAccount }) => {
         }
     }
     function registerNewUser(name, surname, email, city, password) {
+        const teamVar = !teamActive ? null : team;
+        console.log(teamVar);
         const accountData = {
             name,
             surname,
             email,
             city,
             password,
+            team: teamVar,
         };
         const options = {
             headers: {

@@ -18,7 +18,13 @@ let Modal = ({ children, setStateOfPopUps }) => {
     }, []);
 
     const handleClose = () => {
-        setStateOfPopUps({ city: false, logIn: false, info: false });
+        setStateOfPopUps({
+            city: false,
+            logIn: false,
+            info: false,
+            resetPassword: false,
+            forgotPassword: false,
+        });
     };
 
     return ReactDOM.createPortal(
