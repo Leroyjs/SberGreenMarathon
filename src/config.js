@@ -1,3 +1,3 @@
 export const config = {
-    domain: 'https://cabirmg.ru',
+    domain: 'https://www.cabirmg.ru',
 };

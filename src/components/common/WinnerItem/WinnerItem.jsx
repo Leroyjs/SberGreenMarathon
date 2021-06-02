@@ -21,7 +21,9 @@ export const WinnerItem = ({ img, place, name, score, surname }) => {
                 {img ? (
                     <img src={img} alt="" className="winner__img" />
                 ) : (
-                    <span className="">{name[0] + surname[0]}</span>
+                    <span className="">
+                        {(name && name[0]) + (surname && surname[0])}
+                    </span>
                 )}
             </div>
             <div className="winner__info">

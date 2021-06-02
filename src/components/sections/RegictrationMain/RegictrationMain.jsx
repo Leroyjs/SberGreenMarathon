@@ -25,6 +25,7 @@ let RegictrationMain = ({ regNewAccount }) => {
     const [password, setPassword] = useState(false);
     const [passwordSecond, setPasswordSecond] = useState(false);
     const [team, setTeam] = useState(false);
+    const [teamError, setTeamError] = useState(false);
     const [teamActive, setTeamActive] = useState(false);
     const [agreement, setAgreement] = useState(false);
     const [nameError, setNameError] = useState(false);
@@ -146,6 +147,7 @@ let RegictrationMain = ({ regNewAccount }) => {
                                 handler={(value) => {
                                     setTeam(value);
                                 }}
+                                error={teamError}
                                 isDisabled={!teamActive}
                                 title="Команда (если есть)"
                                 placeholder="Введите название команды"
@@ -156,7 +158,6 @@ let RegictrationMain = ({ regNewAccount }) => {
                                 handler={(value) => {
                                     setTeamActive(value);
                                 }}
-                                error={agreementError}
                             >
                                 <p className="regictration-main__agreements">
                                     У меня есть команда
@@ -193,6 +194,14 @@ let RegictrationMain = ({ regNewAccount }) => {
     );
     function checkErrors() {
         let errors = false;
+        if (teamActive && !team) {
+            setTeamError(
+                'Если у вас есть команда, то это поле обязательно для заполнения'
+            );
+            errors = true;
+        } else {
+            setTeamError(false);
+        }
         if (!name) {
             setNameError('Поле обязательно для заполнения');
             errors = true;

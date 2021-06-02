@@ -18,7 +18,7 @@ import { getMyCoordinatesOfCity } from '../../../citiesList';
 
 const axios = require('axios');
 
-const maxNumberOfTrees = 100;
+const maxNumberOfTrees = 100000;
 
 let PlantedTreeMain = ({ token, setStateOfPopUps, cityAccount }) => {
     const [city, setCity] = useState('');

@@ -21,7 +21,6 @@ let MainPage = ({ token }) => {
     const [eventList, setEventList] = useState([]);
     const [treesList, setTreesList] = useState([]);
     const [news, setNews] = useState([]);
-    const [top, setTop] = useState([]);
 
     useEffect(() => {
         getEvents(token).then((events) => {
@@ -34,9 +33,6 @@ let MainPage = ({ token }) => {
         getNews().then((news) => {
             setNews(news);
         });
-        getTop().then((top) => {
-            setTop(top);
-        });
     }, []);
 
     return (
@@ -48,7 +44,7 @@ let MainPage = ({ token }) => {
                 {eventList.length ? (
                     <EventCalendar eventList={eventList} />
                 ) : undefined}
-                {top.length !== 0 ? <Top list={top} /> : undefined}
+                <Top />
                 {treesList.length !== 0 ? (
                     <Map treesList={treesList} />
                 ) : undefined}

@@ -6,56 +6,96 @@ import { TitleH2 } from '../../UI/TitleH2/TitleH2';
 
 import someWinnerImg from './someWinner.png';
 
-export const Top = ({ list }) => {
-    // const [topList, setTopList] = useState('top__tab_plant');
-    // const handleSelectTab = (newTab) => {
-    //     setTopList(newTab);
-    // };
+import { config } from '../../../config.js';
+const axios = require('axios');
+
+export const Top = () => {
+    const [topList, setTopList] = useState('solo');
+    const handleSelectTab = (newTab) => {
+        console.log(topList);
+
+        getTop(newTab).then((result) => {
+            setTop(result);
+            console.log(result);
+            setTopList(newTab);
+        });
+    };
+
+    const [top, setTop] = useState([]);
+
+    useEffect(() => {
+        getTop(topList).then((result) => {
+            setTop(result);
+        });
+    }, []);
 
     return (
         <section className="top">
             <div className="top__inner  main-padding-horizontal">
                 <div className="top__title-wrapper">
-                    <TitleH2>ТОП-10 участников</TitleH2>
-                    {/* <div className="top__tabs">
+                    <TitleH2>ТОП-10</TitleH2>
+                    <div className="top__tabs">
                         <button
-                            onClick={() => handleSelectTab('top__tab_plant')}
+                            onClick={() => handleSelectTab('solo')}
                             className={
                                 'top__tab ' +
-                                (topList === 'top__tab_plant'
+                                (topList === 'solo'
                                     ? 'top__tab_active'
                                     : undefined)
                             }
                         >
-                            Посадка
+                            Личный
                         </button>
                         <button
-                            onClick={() => handleSelectTab('top__tab_marathon')}
+                            onClick={() => handleSelectTab('team')}
                             className={
                                 'top__tab ' +
-                                (topList === 'top__tab_marathon'
+                                (topList === 'team'
                                     ? 'top__tab_active'
                                     : undefined)
                             }
                         >
-                            Марафон
+                            Командный
                         </button>
-                    </div> */}
+                    </div>
                 </div>
 
                 <div className="top__items-wrapper">
-                    {list.map((item, index) => (
+                    {top.map((item, index) => (
                         <div
                             className="top__item"
-                            key={item.name + item.place + item.score}
+                            key={
+                                (item.team ? item.team.title : item.name) +
+                                item.place +
+                                item.score +
+                                index
+                            }
                         >
-                            <WinnerItem
-                                img={item.img}
-                                score={item.user_trees}
-                                place={index + 1}
-                                name={item.name}
-                                surname={item.surname}
-                            ></WinnerItem>
+                            {topList === 'solo' ? (
+                                <WinnerItem
+                                    img={item.img}
+                                    score={item.user_trees}
+                                    place={index + 1}
+                                    name={item.name}
+                                    surname={item.surname}
+                                ></WinnerItem>
+                            ) : (
+                                <WinnerItem
+                                    img={item.img}
+                                    score={item.user_trees}
+                                    place={index + 1}
+                                    name={
+                                        item.team &&
+                                        (item.team.title
+                                            ? item.team.title
+                                            : item.name)
+                                    }
+                                    surname={
+                                        item.team &&
+                                        (item.team.title ? '' : item.name)
+                                    }
+                                ></WinnerItem>
+                            )}
                         </div>
                     ))}
                 </div>
@@ -66,83 +106,25 @@ export const Top = ({ list }) => {
             </div>
         </section>
     );
+
+    async function getTop(target) {
+        console.log(topList);
+        const url =
+            target === 'team'
+                ? config.domain + '/api/get_top_teams/'
+                : config.domain + '/api/get_top_10/';
+        return axios
+            .get(url, {
+                headers: {
+                    Authorization: 'gm',
+                },
+            })
+            .then(function (response) {
+                return response.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+                return [];
+            });
+    }
 };
-
-// function BubbleSort(A) {
-//     // A - массив, который нужно
-//     // отсортировать по возрастанию.
-//     const length = A.length;
-//     A.forEach((item, i) => {
-//         for (let j = 0; j < length - 1 - i; j++) {
-//             if (A[j + 1].score < A[j].score) {
-//                 let t = A[j + 1];
-//                 A[j + 1] = A[j];
-//                 A[j] = t;
-//             }
-//         }
-//     });
-//     return A; // На выходе сортированный по возрастанию массив A.
-// }
-
-const winners = [
-    {
-        img: someWinnerImg,
-        score: 180,
-        place: 1,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 2,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 3,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 4,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 5,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 6,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 7,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 8,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 9,
-        name: 'Андрей Иванов',
-    },
-    {
-        img: someWinnerImg,
-        score: 80,
-        place: 10,
-        name: 'Андрей Иванов',
-    },
-];
