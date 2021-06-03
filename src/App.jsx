@@ -55,7 +55,7 @@ let App = ({ token }) => {
                     path="/reset-password/:token?"
                     render={() => <ResetPassword />}
                 />
-                <Route exact path="/about" render={() => <AboutPage />} />
+                <Route path="/about/:city?" render={() => <AboutPage />} />
             </Switch>
             {token && <PlantedTree />}
             <RootPopUp />

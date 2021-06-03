@@ -47,6 +47,42 @@
   }
 }
 
+.about-tabs {
+  display: flex;
+  overflow-y: auto;
+
+  &__item {
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 24px;
+    cursor: pointer;
+    color: #3A424A;
+
+    &:hover {
+      color: #99CC33;
+    }
+
+    &::after {
+      margin-top: 8px;
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: #DFE2E4;
+    }
+
+    &_active {
+      color: #99CC33;
+
+      &::after {
+        background-color: #99CC33;
+      }
+    }
+
+
+  }
+}
+
 @media screen and (max-width:600px) {
   .about-page {
 
