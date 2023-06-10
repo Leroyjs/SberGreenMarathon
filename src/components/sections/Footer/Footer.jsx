@@ -47,22 +47,22 @@ export const Footer = () => {
             </div>
             <div className="footer__column footer__column_2">
                 <Desc addClasses={['footer__copyright']}>
-                    © 1997—2021 ПАО СберБанк
+                    © 1997—2023 ПАО СберБанк
                 </Desc>
                 <Desc addClasses={['footer__adress']}>
                     Россия, Москва, 117997, ул. Вавилова, 19. Генеральная
                     лицензия на осуществление банковских операций от 11 августа
                     2015 года. Регистрационный номер — 1481.
                 </Desc>
-                <Desc className={['footer__help']}>
-                    Техподдержка:
-                    <a
-                        href="mailto:eko.marathon.service@gmail.com"
-                        className=""
-                    >
-                        eko.marathon.service@gmail.com
-                    </a>
-                </Desc>
+                {/*<Desc className={['footer__help']}>*/}
+                {/*    Техподдержка:*/}
+                {/*    <a*/}
+                {/*        href="mailto:eko.marathon.service@gmail.com"*/}
+                {/*        className=""*/}
+                {/*    >*/}
+                {/*        eko.marathon.service@gmail.com*/}
+                {/*    </a>*/}
+                {/*</Desc>*/}
             </div>
             <div className="footer__column footer__column_3">
                 <nav className="footer__nav">

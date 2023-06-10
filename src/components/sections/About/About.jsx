@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './style.scss';
 
-import { Button } from '../../UI/Button/Button.jsx';
-import { Text } from '../../UI/Text/Text.jsx';
-import { TitleH3 } from '../../UI/TitleH3/TitleH3.jsx';
-import { TitleH2 } from '../../UI/TitleH2/TitleH2.jsx';
-import { Counter } from '../../common/Counter/Counter';
-import { config } from '../../../config.js';
+import {Button} from '../../UI/Button/Button.jsx';
+import {Text} from '../../UI/Text/Text.jsx';
+import {TitleH3} from '../../UI/TitleH3/TitleH3.jsx';
+import {TitleH2} from '../../UI/TitleH2/TitleH2.jsx';
+import {Counter} from '../../common/Counter/Counter';
+import {config} from '../../../config.js';
 
 import aboutImg from './aboutImg.png';
 
@@ -21,7 +21,7 @@ export const About = () => {
                 event_hour,
                 event_minute,
                 event_second,
-            } = result[0];
+            } = result?.[0] || [{}];
             setDate({
                 event_day: +event_day,
                 event_hour: +event_hour,
@@ -61,6 +61,7 @@ export const About = () => {
         </section>
     );
 };
+
 async function getClosestEvent() {
     return axios
         .get(config.domain + '/api/get_closest_event/', {
