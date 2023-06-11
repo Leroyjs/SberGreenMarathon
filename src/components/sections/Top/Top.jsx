@@ -34,30 +34,6 @@ export const Top = () => {
             <div className="top__inner  main-padding-horizontal">
                 <div className="top__title-wrapper">
                     <TitleH2>ТОП-10</TitleH2>
-                    {/*<div className="top__tabs">*/}
-                    {/*    <button*/}
-                    {/*        onClick={() => handleSelectTab('solo')}*/}
-                    {/*        className={*/}
-                    {/*            'top__tab ' +*/}
-                    {/*            (topList === 'solo'*/}
-                    {/*                ? 'top__tab_active'*/}
-                    //                 : undefined)
-                    //         }
-                    //     >
-                    //         Личный
-                    {/*    </button>*/}
-                    {/*    <button*/}
-                    {/*        onClick={() => handleSelectTab('team')}*/}
-                    {/*        className={*/}
-                    {/*            'top__tab ' +*/}
-                    {/*            (topList === 'team'*/}
-                    {/*                ? 'top__tab_active'*/}
-                    {/*                : undefined)*/}
-                    {/*        }*/}
-                    {/*    >*/}
-                    {/*        Командный*/}
-                    {/*    </button>*/}
-                    {/*</div>*/}
                 </div>
 
                 <div className="top__items-wrapper">
