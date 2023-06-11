@@ -7,12 +7,12 @@ import {Text} from '../../UI/Text/Text';
 import {Date} from '../../common/Date/Date';
 
 export const NewsItem = ({img, title, text, date, time, id}) => {
-    const srcImg = img?.replace('http://localhost:8000/', 'https://dogclick.ru/')
+    // const srcImg = img?.replace('http://localhost:8000/', 'https://dogclick.ru/')
     return (
         <div className="news-item">
             <div
                 className="news-item__img"
-                style={{backgroundImage: `url(${srcImg})`}}
+                style={{backgroundImage: `url(${img})`}}
             ></div>
             <div className="news-item__main-content">
                 <div className="news-item__date">

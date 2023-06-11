@@ -6,12 +6,9 @@ import {TitleH2} from '../../UI/TitleH2/TitleH2';
 import {NewsItem} from '../../common/NewsItem/NewsItem';
 
 import someNewsImg from './someNews.png';
+import {mockImg} from "../../../App";
 
-const mockImg = [
-    'https://vbudushee.ru/upload/iblock/fe5/3321ctowmqewp3k4dcic0ytch2gdl7kv/%D0%B1%D0%B0%D0%BD%D0%BD%D0%B5%D1%80%D0%97%D0%9C.png',
-    'https://static.irk.ru/media/img/site/gallery/30624/8e26a344-17e9-4304-a37b-c6be50fab0bf_jpg_800x1000_q85.jpg',
-    'https://marathonec.ru/wp-content/uploads/2019/06/green-marathon-running-hearts-1.jpg'
-]
+
 
 export const LatestNews = ({news}) => {
     return (

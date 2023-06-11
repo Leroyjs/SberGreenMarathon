@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import './style.scss';
 
-import { BreadCrumbs } from '../../common/BreadCrumbs/BreadCrumbs';
-import { TitleH1 } from '../../UI/TitleH1/TitleH1';
-import { NewsItem } from '../../common/NewsItem/NewsItem';
-import { Pagination } from '../../common/Pagination/Pagination';
+import {BreadCrumbs} from '../../common/BreadCrumbs/BreadCrumbs';
+import {TitleH1} from '../../UI/TitleH1/TitleH1';
+import {NewsItem} from '../../common/NewsItem/NewsItem';
+import {Pagination} from '../../common/Pagination/Pagination';
 
-import { config } from '../../../config';
+import {config} from '../../../config';
+import {mockImg} from "../../../App";
 
 const axios = require('axios');
 
@@ -20,17 +21,17 @@ export const AllNews = () => {
     return (
         <section className="all-news main-padding-horizontal">
             <div className="all-news__bread-crumbs">
-                <BreadCrumbs list={breadCrumbsList} />
+                <BreadCrumbs list={breadCrumbsList}/>
             </div>
             <TitleH1>Новости</TitleH1>
             <div className="all-news__main-wrapper">
-                {news.map((item) => (
+                {news.map((item, index) => (
                     <div className="all-news__item-wrapper" key={item.uuid}>
                         <NewsItem
                             id={item.uuid}
                             title={item.title}
                             text={item.text}
-                            img={item.img}
+                            img={mockImg[index % 3]}
                             date={item.news_date}
                             time={item.news_time}
                         ></NewsItem>
@@ -59,6 +60,7 @@ async function getNews() {
             return [];
         });
 }
+
 const breadCrumbsList = [
     {
         title: 'Главня',

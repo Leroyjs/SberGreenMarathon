@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 import './style.scss';
 
-import { BreadCrumbs } from '../../common/BreadCrumbs/BreadCrumbs';
-import { TitleH1 } from '../../UI/TitleH1/TitleH1';
-import { TitleH3 } from '../../UI/TitleH3/TitleH3';
-import { Text } from '../../UI/Text/Text';
-import { Date } from '../../common/Date/Date';
-import { PhotoItem } from '../../common/PhotoItem/PhotoItem';
-import { Like } from '../../common/Like/Like';
+import {BreadCrumbs} from '../../common/BreadCrumbs/BreadCrumbs';
+import {TitleH1} from '../../UI/TitleH1/TitleH1';
+import {TitleH3} from '../../UI/TitleH3/TitleH3';
+import {Text} from '../../UI/Text/Text';
+import {Date} from '../../common/Date/Date';
+import {PhotoItem} from '../../common/PhotoItem/PhotoItem';
+import {Like} from '../../common/Like/Like';
 
 import arrowRight from './media/arrow-right.svg';
 import arrowLeft from './media/arrow-left.svg';
 
-import { config } from '../../../config';
+import {config} from '../../../config';
+import {mockImg} from "../../../App";
 
 const axios = require('axios');
 
 export const ArticleMain = () => {
     const [article, setArticle] = useState({});
-    const { id } = useParams();
+    const {id} = useParams();
     const [breadCrumbsList, setBreadCrumbsList] = useState([]);
 
     useEffect(() => {
@@ -45,13 +46,13 @@ export const ArticleMain = () => {
     return (
         <section className="article-main">
             <div className="article-main__bread-crumbs">
-                <BreadCrumbs list={breadCrumbsList} />
+                <BreadCrumbs list={breadCrumbsList}/>
             </div>
             <TitleH1>{article.title}</TitleH1>
             <div className="article-main__date">
-                <Date time={article.news_time} date={article.news_date} />
+                <Date time={article.news_time} date={article.news_date}/>
             </div>
-            <img src={article.img} alt="" className="article-main__img" />
+            <img src={mockImg[Math.floor(Math.random() * 3)]} alt="" className="article-main__img"/>
             <div className="article-main__text">
                 <Text>{article.text}</Text>
             </div>
